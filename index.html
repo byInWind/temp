@@ -178,21 +178,21 @@
     HREF="sec5526c.htm" style="text-decoration:none">parent page</A>.
 </p>
 <h1 id="hhh">qqqqqq</h1>
-<a id="aaa" href="" download="">下载图片</a>
+<a id="aaa" href="" download="img">下载图片</a>
 <script type="text/javascript" src="./html2canvas.min.js"></script>
 <script type="text/javascript">
     var aaa = document.querySelector('#aaa');
-    function saveFile(data, filename) {
+    function saveFile(data) {
         const save_link = aaa;
         save_link.href = data;
-        save_link.download = filename;
+        // save_link.download = filename;
     }
 
     var hhh = document.querySelector('#hhh');
     hhh.onclick = function () {
         html2canvas(document.body).then(function (canvas) {
             console.log(canvas.toDataURL());
-            saveFile(canvas.toDataURL(),'img')
+            saveFile(canvas.toDataURL())
             // document.body.appendChild(canvas);
         });
     }

@@ -191,7 +191,7 @@
     var hhh = document.querySelector('#hhh');
     hhh.onclick = function () {
         html2canvas(document.body).then(function (canvas) {
-            console.log(canvas.toDataURL())
+            console.log(canvas.toDataURL());
             saveFile(canvas.toDataURL(),'img')
             // document.body.appendChild(canvas);
         });
